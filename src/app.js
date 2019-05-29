@@ -7,6 +7,7 @@ const forecast = require('./utils/forecast')
 
 
 const app = express()
+const port = process.env.PORT || 3002
 // accesses the public folder and static assets
 
 // define paths for express config 
@@ -96,6 +97,6 @@ app.get('*', (req, res) => {
 // app.com/about
 
 // This starts the server
-app.listen(3002, () => {
-    console.log('Server is running on port 3002')
+app.listen(port, () => {
+    console.log('Server is running on port ' + port)
 })
